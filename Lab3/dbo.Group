@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Group] (
+    [ID]                     INT NULL,
+    [Name of group]                   NVARCHAR (50) NULL,
+    [Surname of the headman] NVARCHAR (50) NULL,
+    [Number of people]       INT           NULL,
+    [Faculty ID]             INT           NOT NULL,
+    CONSTRAINT [FK_Group_ToFaculty_ID] FOREIGN KEY ([Faculty ID]) REFERENCES [dbo].[Faculty] ([ID])
+);
+
